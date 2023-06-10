@@ -15,7 +15,6 @@ export default {
                state.error = null
           }
      },
-     
      actions: {
           setLoading ({commit}, payload) {
                commit('setLoading', payload)
