@@ -30,8 +30,9 @@
                         <v-spacer></v-spacer>
                         <v-btn 
                         color="primary"
-                        @click="onsubmit"
-                        :disabled="!valid">
+                        @click="onSubmit"
+                        :loading="loading"
+                        :disabled="!valid || loading">
                         Login
                         </v-btn>
                     </v-card-actions>
@@ -58,6 +59,11 @@ export default {
     
         }
     },
+    computed: {
+	loading() {
+		return this.$store.getters.loading
+	}
+},
     methods: {
         onSubmit(){
 	if (this.$refs.form.validate()){
