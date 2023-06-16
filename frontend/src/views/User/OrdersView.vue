@@ -39,11 +39,12 @@ export default {
             order.done = !order.done
             console.log(order.done)
         },
-        computed: {
-ads(){
-return this.$store.getters.myAds
+computed: {
+orders(){
+return this.$store.getters.orders
 }
 }
+
   }
 }
 </script>
